@@ -1,73 +1,101 @@
-# Socio
+# 🌐 Socio – Social Networking Platform
 
-Socio is a full-stack social networking application with a Next.js frontend and an Express + MongoDB backend. It includes authentication, posts, comments, stories, profile management, friend requests, notifications, bookmarks, and an AI chat route.
+**Socio** is a full-stack social networking application built with a modern tech stack. It enables users to connect, share posts, interact through comments, manage profiles, and engage with real-time features like notifications and AI-powered chat.
 
-![Socio Screenshot](./frontend/public/images/screenshot.png)
+---
 
-## Tech Stack
+## 🚀 Features
 
-- Frontend: Next.js 14, React 18, Redux Toolkit, Tailwind CSS, Framer Motion
-- Backend: Node.js, Express, MongoDB, Mongoose
-- Auth: JWT and NextAuth with Google login
-- Media: Cloudinary
+* 🔐 User Authentication (JWT + Google Login via NextAuth)
+* 📝 Create, Edit, Like, Save & Comment on Posts
+* 📸 Stories Creation & Viewing
+* 👥 Friend Requests & Connections
+* 🔔 Real-Time Notifications
+* 👤 Profile Management & Avatar Upload
+* 🤖 AI Chat Integration
+* 📱 Fully Responsive UI
 
-## Project Structure
+---
 
-```text
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js 14
+* React 18
+* Redux Toolkit
+* Tailwind CSS
+* Framer Motion
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+
+### Additional Services
+
+* Authentication: JWT, NextAuth (Google)
+* Media Storage: Cloudinary
+* AI Integration: OpenAI / Groq
+
+---
+
+## 📁 Project Structure
+
+```
 SocialMediaApp-Main/
-|- frontend/   # Next.js app
-|- backend/    # Express API
-`- README.md
+├── frontend/      # Next.js application
+├── backend/       # Express API server
+└── README.md
 ```
 
-## Features
+---
 
-- User registration and login
-- Google authentication with NextAuth
-- Create, edit, like, save, and comment on posts
-- Stories UI and story creation
-- Friend requests and connections
-- Notifications
-- Profile editing and avatar upload
-- AI chat API route support
+## ⚙️ Local Setup
 
-## Local Setup
+### 1️⃣ Clone the Repository
 
-### 1. Clone the repository
-
-```bash
+```
 git clone https://github.com/Kalyan-23/Social-Network.git
 cd Social-Network
 ```
 
-### 2. Install dependencies
+---
 
-Install dependencies in both apps:
+### 2️⃣ Install Dependencies
 
-```bash
+```
 cd backend
 npm install
+
 cd ../frontend
 npm install
 ```
 
-### 3. Configure environment variables
+---
 
-Create a `.env` file in `backend/`:
+### 3️⃣ Environment Variables
 
-```env
+#### Backend (`backend/.env`)
+
+```
 MONGO_URI=mongodb://localhost:27017/socialmedia
 PORT=8000
 CORS_ORIGIN=http://localhost:3000
 JWT_SECRET=your_jwt_secret
+
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
 CLOUDINARY_API_KEY=your_cloudinary_api_key
 CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 ```
 
-Create a `.env.local` file in `frontend/`:
+---
 
-```env
+#### Frontend (`frontend/.env.local`)
+
+```
 NEXT_PUBLIC_BACKEND_API=http://localhost:8000
 
 NEXTAUTH_URL=http://localhost:3000
@@ -79,89 +107,102 @@ GOOGLE_CLIENT_SECRET=your_google_client_secret
 OPENAI_API_KEY=your_openai_api_key
 OPENAI_MODEL=gpt-4.1-mini
 
-# Optional alternative for chat route
+# Optional
 GROQ_API_KEY=your_groq_api_key
 GROQ_MODEL=openai/gpt-oss-20b
 ```
 
-### 4. Start the backend
+---
 
-```bash
+### 4️⃣ Run the Application
+
+#### Start Backend
+
+```
 cd backend
 npm run dev
 ```
 
-### 5. Start the frontend
+#### Start Frontend
 
-```bash
+```
 cd frontend
 npm run dev
 ```
 
-Frontend runs on `http://localhost:3000` and backend runs on `http://localhost:8000` by default.
+---
 
-## Deployment
+## 🌐 Application URLs
 
-Recommended setup:
+* Frontend → http://localhost:3000
+* Backend → http://localhost:8000
 
-- Frontend: Vercel
-- Backend: Vercel, Railway, or Render
-- Database: MongoDB Atlas
+---
 
-Deployment order:
+## 🚀 Deployment
 
-1. Deploy the backend
-2. Copy the deployed backend URL
-3. Set `NEXT_PUBLIC_BACKEND_API` in the frontend to that URL
-4. Deploy the frontend
+### Recommended Stack
 
-### Backend Environment Variables
+* Frontend → Vercel
+* Backend → Vercel / Railway / Render
+* Database → MongoDB Atlas
 
-```env
-MONGO_URI=...
-PORT=8000
-CORS_ORIGIN=https://your-frontend-domain
-JWT_SECRET=...
-CLOUDINARY_CLOUD_NAME=...
-CLOUDINARY_API_KEY=...
-CLOUDINARY_API_SECRET=...
+### Deployment Steps
+
+1. Deploy backend first
+2. Copy backend URL
+3. Update frontend `.env.local`
+4. Deploy frontend
+
+---
+
+## 🔐 Security Note
+
+* Never commit `.env` files or secrets
+* Rotate credentials if exposed
+* Use environment variables in production
+
+---
+
+## 📜 Scripts
+
+### Backend
+
+```
+npm run dev     # Development
+npm start       # Production
 ```
 
-### Frontend Environment Variables
+### Frontend
 
-```env
-NEXT_PUBLIC_BACKEND_API=https://your-backend-domain
-NEXTAUTH_URL=https://your-frontend-domain
-NEXTAUTH_SECRET=...
-GOOGLE_CLIENT_ID=...
-GOOGLE_CLIENT_SECRET=...
-OPENAI_API_KEY=...
-OPENAI_MODEL=gpt-4.1-mini
-GROQ_API_KEY=...
-GROQ_MODEL=openai/gpt-oss-20b
+```
+npm run dev     # Development
+npm run build   # Build
+npm start       # Production
 ```
 
-## Important Security Note
+---
 
-Do not commit real secrets to the repository. If any real OAuth, database, JWT, Cloudinary, OpenAI, or Groq credentials were previously pushed, rotate them before deployment.
+## 📸 Screenshot
 
-## Scripts
+Add your screenshot here:
 
-Backend:
+```
+<img width="1906" height="946" alt="Screenshot 2026-04-22 230720" src="https://github.com/user-attachments/assets/da77af40-370e-4347-9458-f23df3dc3b82" />
 
-```bash
-npm run dev
-npm start
 ```
 
-Frontend:
+---
 
-```bash
-npm run dev
-npm run build
-npm start
-```
+## 📄 License
 
-## Repository
+This project is licensed under the **MIT License**.
 
-GitHub: https://github.com/Kalyan-23/Social-Network
+---
+
+## 👨‍💻 Author
+
+**Kalyan**
+GitHub: https://github.com/Kalyan-23
+
+---
