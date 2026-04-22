@@ -185,10 +185,8 @@ npm start       # Production
 
 ## 📸 Screenshot
 
-Add your screenshot here:
-
 ```
-<img width="1906" height="946" alt="Screenshot 2026-04-22 230720" src="https://github.com/user-attachments/assets/da77af40-370e-4347-9458-f23df3dc3b82" />
+<img width="1906" height="946" alt="Screenshot 2026-04-22 230720" src="https://github.com/user-attachments/assets/0e8f8142-60dd-43d5-b037-f42b059c15f0" />
 
 ```
 
