@@ -1,0 +1,12 @@
+NEXT_PUBLIC_BACKEND_API=http://localhost:8000
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=openai/gpt-oss-20b
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_MODEL=gpt-4.1-mini
+
+NEXTAUTH_URL=http://localhost:3000
+
+GOOGLE_CLIENT_ID=264096320626-5rgj8p8bved08po7hkp3sfinrha98ibg.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+
+NEXTAUTH_SECRET=3/QuqANnO1PamsO30t8VcRYXysek4rInVJzkaNQ2VA8=
