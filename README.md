@@ -183,24 +183,10 @@ npm start       # Production
 
 ---
 
-## 📸 Screenshot
-
-```
-<img width="1906" height="946" alt="Screenshot 2026-04-22 230720" src="https://github.com/user-attachments/assets/3b43f7fb-2fe8-40e2-a3c0-6217dd2c58e7" />
-
-```
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License**.
 
 ---
 
-## 👨‍💻 Author
 
-**Kalyan**
-GitHub: https://github.com/Kalyan-23
-
----
