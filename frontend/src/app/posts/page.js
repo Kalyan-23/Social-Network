@@ -10,6 +10,7 @@ import StorySection from "@/components/feed/stories/StorySection";
 import RunningServer from "@/components/RunningServer";
 import axios from "axios";
 import { ProfilePicVerify } from "@/components";
+import { isBackendReadyResponse } from "@/utils/isBackendReady";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -20,9 +21,7 @@ export default function Home() {
     const checkServer = async () => {
       try {
         const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_API}/`);
-        if (response.data === "Server is running!") {
-          setIsServerRunning(true);
-        }
+        setIsServerRunning(isBackendReadyResponse(response.data));
       } catch (error) {
         setIsServerRunning(false);
       }

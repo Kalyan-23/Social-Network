@@ -12,6 +12,7 @@ import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Loading } from "@/components";
+import { isBackendReadyResponse } from "@/utils/isBackendReady";
 
 function HomeContent() {
   const dispatch = useDispatch();
@@ -36,9 +37,7 @@ function HomeContent() {
     const checkServer = async () => {
       try {
         const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_API}/`);
-        if (response.data === "Server is running!") {
-          setIsServerRunning(true);
-        }
+        setIsServerRunning(isBackendReadyResponse(response.data));
       } catch (error) {
         setIsServerRunning(false);
       }
